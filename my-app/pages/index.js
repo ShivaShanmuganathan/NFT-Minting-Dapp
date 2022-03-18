@@ -136,6 +136,7 @@ export default function Home() {
       const nftContract = new Contract(NFT_CONTRACT_ADDRESS, abi, provider);
       // call the presaleStarted from the contract
       const _presaleStarted = await nftContract.presaleStarted();
+      console.log("PreSale Status", _presaleStarted)
       if (!_presaleStarted) {
         await getOwner();
       }

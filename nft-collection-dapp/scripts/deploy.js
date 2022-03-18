@@ -7,6 +7,7 @@ async function main() {
   const whitelistContract = WHITELIST_CONTRACT_ADDRESS;
   // URL from where we can extract the metadata for a Crypto Dev NFT
   const metadataURL = METADATA_URL;
+  console.log("metadataURL", metadataURL);
   /*
   A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
   so cryptoDevsContract here is a factory for instances of our CryptoDevs contract.
@@ -18,7 +19,8 @@ async function main() {
     metadataURL,
     whitelistContract
   );
-
+  (await deployedCryptoDevsContract.startPresale())
+  console.log(await deployedCryptoDevsContract.presaleStarted())
   // print the address of the deployed contract
   console.log(
     "Crypto Devs Contract Address:",
