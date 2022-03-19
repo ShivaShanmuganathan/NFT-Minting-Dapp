@@ -19,13 +19,22 @@ async function main() {
     metadataURL,
     whitelistContract
   );
-  (await deployedCryptoDevsContract.startPresale())
-  console.log(await deployedCryptoDevsContract.presaleStarted())
-  // print the address of the deployed contract
   console.log(
     "Crypto Devs Contract Address:",
     deployedCryptoDevsContract.address
   );
+  
+  const NFT_price = ethers.utils.parseUnits('0.001', 'ether')
+  await deployedCryptoDevsContract.startPresale()
+  console.log("PreSale Started: ",await deployedCryptoDevsContract.presaleStarted())
+  (await deployedCryptoDevsContract.presaleMint({ value: NFT_price })).wait()
+  // console.log("Token 1 Owner Address: ",await deployedCryptoDevsContract.ownerOf(1))
+  
+  
+
+
+  // print the address of the deployed contract
+  
 }
 
 // Call the main function and catch if there is any error
