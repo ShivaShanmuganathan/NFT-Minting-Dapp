@@ -351,9 +351,15 @@ export default function Home() {
     // If presale started and has ended, its time for public minting
     if (presaleStarted && presaleEnded) {
       return (
-        <button className={styles.button} onClick={publicMint}>
+        <div>
+          {/* <img className={styles.image2} src="./mint.gif" /> */}
+          <button className={styles.button} onClick={publicMint}>
           Public Mint 🚀
-        </button>
+          </button>
+
+          
+
+        </div>
       );
     }
   };
@@ -367,6 +373,7 @@ export default function Home() {
       </Head>
       <div className={styles.main}>
         <div>
+          
           <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
           <div className={styles.description}>
             Its an NFT collection for developers in Crypto.
@@ -375,9 +382,13 @@ export default function Home() {
             {tokenIdsMinted}/20 have been minted
           </div>
           {renderButton()}
+          
         </div>
+
         <div>
-          <img className={styles.image} src="./cryptodevs/0.svg" />
+
+          <img className={styles.image} src="./33Ho.gif" />
+          
         </div>
       </div>
 

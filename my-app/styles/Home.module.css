@@ -16,9 +16,15 @@
 }
 
 .image {
-  width: 70%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
   margin-left: 20%;
+}
+
+.image2 {
+  width: 50%;
+  height: 50%;
+  /* margin-left: 20%; */
 }
 
 .title {
