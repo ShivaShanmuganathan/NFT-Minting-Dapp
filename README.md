@@ -24,7 +24,7 @@
 ## Run This Project 🏃‍♀️💨
 1. Clone this repository 
 ```shell 
-git clone https://github.com/ShivaShanmuganathan/NFT-Collection-Dapp
+git clone https://github.com/ShivaShanmuganathan/NFT-Minting-Dapp
 ```
 
 2. Frontend - goto the frontend folder, install dependencies, and run the app. Visit [localhost:3000](http://localhost:3000/)
