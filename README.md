@@ -7,6 +7,9 @@
 - ### [Check Out 🚀 Live DAO Project ](https://fullstack-dao-dapp.vercel.app/)
 - ### Collect your Rinkeby-Eth from [this faucet](https://faucets.chain.link/rinkeby)
 
+## Project Screenshot
+![capture](./Copy-of-Crypto-Devs-25-March-2022.gif)
+
 ## Project Description 📃
 
 ### [Full Stack NFT Minting Project](http://nft-collection-dapp-kappa.vercel.app/)
