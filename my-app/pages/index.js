@@ -353,7 +353,7 @@ export default function Home() {
       return (
         <div>          
           <button className={styles.button} onClick={publicMint}>
-          Mint Token 🚀
+            Mint Token 🚀
           </button>
 
         </div>
@@ -418,11 +418,10 @@ export default function Home() {
           </div>
 
           <div className={styles.griditem3}>
-            <button className={styles.button}>
-              <a href="https://fullstack-dao-dapp.vercel.app/" target="_blank" rel="noopener noreferrer">
-                JOIN DAO
-              </a>
-            </button>
+            
+            <form action="https://fullstack-dao-dapp.vercel.app/" method="get" target="_blank">
+              <button className={styles.button} type="submit">JOIN DAO</button>
+            </form>
 
           </div>  
 
