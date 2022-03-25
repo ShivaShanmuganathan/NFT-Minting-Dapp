@@ -4,7 +4,11 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Cinzel Decorative', regular;
+  background-color: #000000;
+  color: #ffffff
 }
 
 .footer {
@@ -13,6 +17,11 @@
   border-top: 1px solid #eaeaea;
   justify-content: center;
   align-items: center;
+  background: #2e353e;
+  color:white;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Cinzel Decorative', regular;
 }
 
 .image {
@@ -37,6 +46,8 @@
   margin: 2rem 0;
   font-size: 1.2rem;
 }
+
+
 
 .button {
   border-radius: 4px;

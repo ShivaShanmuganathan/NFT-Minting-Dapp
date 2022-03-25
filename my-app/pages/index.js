@@ -352,7 +352,17 @@ export default function Home() {
     if (presaleStarted && presaleEnded) {
       return (
         <div>
-          {/* <img className={styles.image2} src="./mint.gif" /> */}
+          
+          {/* <img className={styles.image2} src="./membership.mp4" /> */}
+          
+          <video width="350px" height="350px" playsInline="playsinline" muted="muted" preload="yes" autoPlay="autoplay" loop="loop" id="vjs_video_739_html5_api" className="video-size" data-setup='{"autoplay":"any"}'>
+    		    <source src="./membership.mp4" type="video/mp4" ></source>
+          </video>
+
+
+          
+
+
           <button className={styles.button} onClick={publicMint}>
           Public Mint 🚀
           </button>
@@ -376,7 +386,7 @@ export default function Home() {
           
           <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
           <div className={styles.description}>
-            Its an NFT collection for developers in Crypto.
+            NFT collection for developers in Crypto.
           </div>
           <div className={styles.description}>
             {tokenIdsMinted}/20 have been minted
@@ -393,8 +403,10 @@ export default function Home() {
       </div>
 
       <footer className={styles.footer}>
-        Made with &#10084; by Crypto Devs
+        Made with &#10084; by shiva
       </footer>
+
+      
     </div>
   );
 }
