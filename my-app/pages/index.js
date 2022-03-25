@@ -88,6 +88,11 @@ export default function Home() {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
       // When used for the first time, it prompts the user to connect their wallet
+      web3ModalRef.current = new Web3Modal({
+        network: "rinkeby",
+        providerOptions: {},
+        disableInjectedProvider: false,
+      });
       await getProviderOrSigner();
       setWalletConnected(true);
     } catch (err) {
@@ -261,15 +266,11 @@ export default function Home() {
   // In this case, whenever the value of `walletConnected` changes - this effect will be called
   useEffect(() => {
     // if wallet is not connected, create a new instance of Web3Modal and connect the MetaMask wallet
-    if (!walletConnected) {
+    if (walletConnected) {
       // Assign the Web3Modal class to the reference object by setting it's `current` value
       // The `current` value is persisted throughout as long as this page is open
-      web3ModalRef.current = new Web3Modal({
-        network: "rinkeby",
-        providerOptions: {},
-        disableInjectedProvider: false,
-      });
-      connectWallet();
+      
+      // connectWallet();
 
       // Check if presale has started and ended
       const _presaleStarted = checkIfPresaleStarted();
@@ -301,7 +302,7 @@ export default function Home() {
       renderButton: Returns a button based on the state of the dapp
     */
   const renderButton = () => {
-    // If wallet is not connected, return a button which allows them to connect their wllet
+    // If wallet is not connected, return a button which allows them to connect their wallet
     if (!walletConnected) {
       return (
         <button onClick={connectWallet} className={styles.button}>
@@ -313,6 +314,18 @@ export default function Home() {
     // If we are currently waiting for something, return a loading button
     if (loading) {
       return <button className={styles.button}>Loading...</button>;
+    }
+
+    // If presale started and has ended, its time for public minting
+    if (presaleStarted && presaleEnded) {
+      return (
+        <div>          
+          <button className={styles.button} onClick={publicMint}>
+            Mint Token 🚀
+          </button>
+
+        </div>
+      );
     }
 
     // If connected user is the owner, and presale hasnt started yet, allow them to start the presale
@@ -348,17 +361,7 @@ export default function Home() {
       );
     }
 
-    // If presale started and has ended, its time for public minting
-    if (presaleStarted && presaleEnded) {
-      return (
-        <div>          
-          <button className={styles.button} onClick={publicMint}>
-            Mint Token 🚀
-          </button>
-
-        </div>
-      );
-    }
+    
   };
 
   return (
