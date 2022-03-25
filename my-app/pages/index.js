@@ -355,10 +355,11 @@ export default function Home() {
           
           {/* <img className={styles.image2} src="./membership.mp4" /> */}
           
-          <video width="350px" height="350px" playsInline="playsinline" muted="muted" preload="yes" autoPlay="autoplay" loop="loop" id="vjs_video_739_html5_api" className="video-size" data-setup='{"autoplay":"any"}'>
+          {/* <video width="350px" height="350px" playsInline="playsinline" muted="muted" preload="yes" autoPlay="autoplay" loop="loop" id="vjs_video_739_html5_api" className="video-size" data-setup='{"autoplay":"any"}'>
     		    <source src="./membership.mp4" type="video/mp4" ></source>
-          </video>
+          </video> */}
 
+          {/* <img className={styles.image} src="./33Ho.gif" /> */}
 
           
 
@@ -381,25 +382,43 @@ export default function Home() {
         <meta name="description" content="Whitelist-Dapp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+
+      
+
       <div className={styles.main}>
-        <div>
+        <div className="grid grid-cols-3 gap-3 p-5">
           
-          <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
-          <div className={styles.description}>
-            NFT collection for developers in Crypto.
+          <div className={styles.imagediv}> 
+            
+            <img className="object-contain h-100" src="./33Ho.gif" />
+
           </div>
-          <div className={styles.description}>
-            {tokenIdsMinted}/20 have been minted
+
+
+          <div className="text-center pt-15">
+            
+            <h1 className={styles.title}>Welcome to Crypto Devs!</h1>
+            <div className={styles.description}>
+              NFT collection for Crypto Developers.
+            </div>
+            <div className={styles.description}>
+              {tokenIdsMinted}/20 have been minted
+            </div>
+            {renderButton()}
+            
           </div>
-          {renderButton()}
-          
+
+
+          <div className = {styles.videodiv}>
+    
+            <video width="350px" height="350px" playsInline="playsinline" muted preload="yes" autoPlay="autoplay" loop="loop" id="vjs_video_739_html5_api" className="video-size" data-setup='{"autoplay":"any"}'>
+              <source src="./membership.mp4" type="video/mp4" ></source>
+            </video>
+            
+          </div>
+
         </div>
 
-        <div>
-
-          <img className={styles.image} src="./33Ho.gif" />
-          
-        </div>
       </div>
 
       <footer className={styles.footer}>
