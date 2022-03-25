@@ -351,24 +351,10 @@ export default function Home() {
     // If presale started and has ended, its time for public minting
     if (presaleStarted && presaleEnded) {
       return (
-        <div>
-          
-          {/* <img className={styles.image2} src="./membership.mp4" /> */}
-          
-          {/* <video width="350px" height="350px" playsInline="playsinline" muted="muted" preload="yes" autoPlay="autoplay" loop="loop" id="vjs_video_739_html5_api" className="video-size" data-setup='{"autoplay":"any"}'>
-    		    <source src="./membership.mp4" type="video/mp4" ></source>
-          </video> */}
-
-          {/* <img className={styles.image} src="./33Ho.gif" /> */}
-
-          
-
-
+        <div>          
           <button className={styles.button} onClick={publicMint}>
           Mint Token 🚀
           </button>
-
-          
 
         </div>
       );
@@ -417,41 +403,12 @@ export default function Home() {
             
           </div>
 
-          {/* <div className="col-span-3">
-
-            <div className="text-center">
-            Made by shiva
-            </div> 
-
-            <div className="text-right">
-            JOIN THE DAO
-            </div> 
-
-          </div> */}
-
         </div>
 
       </div>
 
       <footer className={styles.gridcontainer}>
 
-        {/* <div  className="grid lg:grid-cols-2 gap-4"> 
-
-          <div className="mb-6 md:mb-0">
-            <a href="https://github.com/ShivaShanmuganathan" target="_blank" rel="noopener noreferrer">
-              MADE BY SHIVA
-            </a>
-          </div>
-
-          <div className="mb-6 md:mb-0">
-            <a href="https://github.com/ShivaShanmuganathan" target="_blank" rel="noopener noreferrer">
-              MADE BY SHIVA
-            </a>
-          </div>
-
-        </div> */}
-
-        {/* <div className={styles.gridcontainer}> */}
           <div className={styles.griditem}></div>
           
           <div className={styles.griditem2}>
@@ -468,48 +425,9 @@ export default function Home() {
             </button>
 
           </div>  
-        {/* </div> */}
 
       </footer>
-
-    {/* <footer className="bg-black text-white border-white">
-      <div className="content-center md:px-10 xl:px-40 py-12">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
-          
-          <div>
-            
-          </div>
-          
-          <div className="text-center">
-            
-            <a className={styles.madeby} href="https://github.com/ShivaShanmuganathan/">
-              MADE BY SHIVA
-            </a>
-          </div>
-          
-          <div className="text-right ml-40">
-            
-            <button className={styles.button}>
-              <a href="https://fullstack-dao-dapp.vercel.app/">
-                JOIN DAO
-              </a>
-            </button>
-
-          </div>
-
-        </div>
-        
-        <div className="flex justify-center">
-          <div className="text-center">
-            
-          </div>
-        </div>
-
-
-      </div>
-    </footer> */}
-
-      
+  
     </div>
   );
 }
