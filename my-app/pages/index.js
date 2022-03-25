@@ -365,7 +365,7 @@ export default function Home() {
 
 
           <button className={styles.button} onClick={publicMint}>
-          Public Mint 🚀
+          Mint Token 🚀
           </button>
 
           
@@ -417,13 +417,97 @@ export default function Home() {
             
           </div>
 
+          {/* <div className="col-span-3">
+
+            <div className="text-center">
+            Made by shiva
+            </div> 
+
+            <div className="text-right">
+            JOIN THE DAO
+            </div> 
+
+          </div> */}
+
         </div>
 
       </div>
 
-      <footer className={styles.footer}>
-        Made with &#10084; by shiva
+      <footer className={styles.gridcontainer}>
+
+        {/* <div  className="grid lg:grid-cols-2 gap-4"> 
+
+          <div className="mb-6 md:mb-0">
+            <a href="https://github.com/ShivaShanmuganathan" target="_blank" rel="noopener noreferrer">
+              MADE BY SHIVA
+            </a>
+          </div>
+
+          <div className="mb-6 md:mb-0">
+            <a href="https://github.com/ShivaShanmuganathan" target="_blank" rel="noopener noreferrer">
+              MADE BY SHIVA
+            </a>
+          </div>
+
+        </div> */}
+
+        {/* <div className={styles.gridcontainer}> */}
+          <div className={styles.griditem}></div>
+          
+          <div className={styles.griditem2}>
+            <a href="https://github.com/ShivaShanmuganathan/" target="_blank" rel="noopener noreferrer">
+                MADE BY SHIVA
+            </a>
+          </div>
+
+          <div className={styles.griditem3}>
+            <button className={styles.button}>
+              <a href="https://fullstack-dao-dapp.vercel.app/" target="_blank" rel="noopener noreferrer">
+                JOIN DAO
+              </a>
+            </button>
+
+          </div>  
+        {/* </div> */}
+
       </footer>
+
+    {/* <footer className="bg-black text-white border-white">
+      <div className="content-center md:px-10 xl:px-40 py-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3">
+          
+          <div>
+            
+          </div>
+          
+          <div className="text-center">
+            
+            <a className={styles.madeby} href="https://github.com/ShivaShanmuganathan/">
+              MADE BY SHIVA
+            </a>
+          </div>
+          
+          <div className="text-right ml-40">
+            
+            <button className={styles.button}>
+              <a href="https://fullstack-dao-dapp.vercel.app/">
+                JOIN DAO
+              </a>
+            </button>
+
+          </div>
+
+        </div>
+        
+        <div className="flex justify-center">
+          <div className="text-center">
+            
+          </div>
+        </div>
+
+
+      </div>
+    </footer> */}
 
       
     </div>
