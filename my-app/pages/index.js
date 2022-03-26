@@ -21,6 +21,22 @@ export default function Home() {
   // Create a reference to the Web3 Modal (used for connecting to Metamask) which persists as long as the page is open
   const web3ModalRef = useRef();
 
+  const checkNetwork = async() => {
+    const { ethereum } = window;
+    let chainId = await ethereum.request({ method: 'eth_chainId' })
+    if (chainId !== '0x4') {
+      // window.alert("Please switch to the Matic Test Network!");
+      // throw new Error("Please switch to the Matic Test Network");
+      
+      window.alert("This Dapp works on Rinkeby Test Network Only. Please Approve to switch to Rinkeby");
+      await ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId:'0x4' }],
+      })  
+    }
+    
+  }
+
   /**
    * presaleMint: Mint an NFT during the presale
    */
@@ -88,6 +104,7 @@ export default function Home() {
     try {
       // Get the provider from web3Modal, which in our case is MetaMask
       // When used for the first time, it prompts the user to connect their wallet
+      await checkNetwork();
       web3ModalRef.current = new Web3Modal({
         network: "rinkeby",
         providerOptions: {},
